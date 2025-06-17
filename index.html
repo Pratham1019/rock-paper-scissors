@@ -4,11 +4,59 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/javascript.js" defer></script>
 	<title>Rock Paper Scissors</title>
+
+	<!-- Google Fonts import -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
-	<script src="javascript.js"></script>
+	<audio src="assets/audios/cpu-win.mp3" id="cpu-win-audio" preload="auto"></audio>
+	<audio src="assets/audios/game-start.mp3" id="game-start-audio" preload="auto"></audio>
+	<audio src="assets/audios/player-win.mp3" id="player-win-audio" preload="auto"></audio>
+	<audio src="assets/audios/tie.mp3" id="tie-audio" preload="auto"></audio>
+	<audio src="assets/audios/game-win.mp3" id="game-win-audio" preload="auto"></audio>
+	<audio src="assets/audios/game-loss.mp3" id="game-loss-audio" preload="auto"></audio>
+	<div id="main-container">
+		<div id="header">ROCK PAPER SCISSORS</div>
+		<div id="main-content">
+			<div id="game-container">
+				<div id="player">
+					<div class="username">PLAYER</div>
+					<div class="player-box box">
+						<img src="" id="player-img">
+					</div>
+					<div class="score">Score: <span class="player-score-count count">0</span></div>
+				</div>
+
+				<div id="versus">V/S</div>
+
+				<div id="cpu">
+					<div class="username">CPU</div>
+					<div class="cpu-box box">
+						<img src="" id="cpu-img">
+					</div>
+					<div class="score">Score: <span class="cpu-score-count count">0</span></div>
+				</div>
+			</div>
+
+			<div id="status">
+				Its a tie. Play again.
+			</div>
+
+			<div id="buttons">
+				<button class="rock-btn player-choice" data-choice="ROCK">ROCK</button>
+				<button class="paper-btn player-choice" data-choice="PAPER">PAPER</button>
+				<button class="scissors-btn player-choice" data-choice="SCISSORS">SCISSORS</button>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
